@@ -1,10 +1,20 @@
-import { Client } from "discord.js";
+import { Client, REST, Routes } from "discord.js";
 import { CONFIG } from "./config";
 
-const client = new Client({
+export const client = new Client({
     intents: [
-        "Guilds"
+        "Guilds",
+        "GuildMessages"
     ]
+});
+
+const rest = new REST({ version: "10" }).setToken(CONFIG.token);
+
+rest.put(Routes.applicationCommands(CONFIG.clientID), {
+    body: 
+        [
+
+        ]
 });
 
 client.login(CONFIG.token);

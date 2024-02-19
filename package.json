@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "esbuild src/main.ts --bundle --platform=node --outfile=out.cjs",
-    "lint": "eslint src/*.ts --max-warnings=0 --fix"
+    "lint": "eslint src/**.ts --max-warnings=0 --fix"
   },
   "keywords": [],
   "author": "",
